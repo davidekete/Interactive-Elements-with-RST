@@ -1,9 +1,7 @@
 <div class="background">
   <link rel="stylesheet" href="styles.css" />
+  <script defer src="./snippet.js"></script>
   <div class="top">
-    <select name="" id="" class="blue">
-      <option value=""></option>
-    </select>
     <div class="button">
       <svg
         width="12"
@@ -28,45 +26,33 @@
   <div class="options">
     <p>docker</p>
     <p>run</p>
-    <p>--platform</p>
-    <div class="green flex">
-      <p></p>
-      <select name="system-architecture" id="" class="green">
-        <option value="linux-amd64">linux/amd64</option>
-        <option value="linux-arm64">linux/arm64</option>
-        <option value="windows-amd64">windows/amd64</option>
-      </select>
+    <div class="green">
+      <p>--platform</p>
     </div>
 
-    <div class="blue flex">
+    <div class="blue">
       <p>--env NODE_ENV=</p>
-      <select name="" id="" class="blue">
-        <option value="development">development</option>
-        <option value="production">production</option>
-      </select>
     </div>
 
-    <div class="purple flex">
+    <div class="purple">
       <p>--image</p>
-      <select name="programming-language" id="" class="purple">
-        <option value="node">node</option>
-        <option value="python">python</option>
-        <option value="ubuntu">ubuntu</option>
-      </select>
     </div>
 
     <div class="red flex">
       <p>--network</p>
-      <select name="" id="" class="red">
-        <option value="bridge">bridge</option>
-        <option value="host">host</option>
-        <option value="none">none</option>
-      </select>
+      <div class="dropdown">
+        <p  id="dropdown-label" onclick="showDropdownOptions(1)"
+          >bridge</p>
+        <div id="dropdown-options-1">
+          <p class="dropdown-option">bridge</p>
+          <p class="dropdown-option" data-option="Option One">host</p>
+          <p class="dropdown-option">none</p>
+        </div>
     </div>
   </div>
 
   <div class="validity">
-    <div class="green flex gap" style="display: none">
+    <div class="green" style="display: none">
       <p>Valid</p>
     </div>
     <div class="red" style="display: none">
@@ -75,7 +61,7 @@
   </div>
 </div>
 
-<div class="dropdown">
+<!-- <div class="dropdown">
   <p  id="dropdown-label" onclick="showDropdownOptions(1)"
     >Default Value Here</label
   >
@@ -85,4 +71,4 @@
     <p class="dropdown-option">Option Three</p>
     <p class="dropdown-option">Option Four</p>
   </div>
-</div>
+</div> -->
