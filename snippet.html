@@ -2,7 +2,7 @@
   <link rel="stylesheet" href="styles.css" />
   <script defer src="./snippet.js"></script>
   <div class="top">
-    <div class="button">
+    <div class="button" id="copy-code">
       <svg
         width="12"
         height="12"
@@ -28,8 +28,9 @@
     <p>run</p>
     <div class="green">
       <div class="flex">
-        <p> <span>--</span>platform</p>
+        <p>--platform</p>
       </div>
+      <!-- <p>--platform</p> -->
       <div class="dropdown">
         <p
           class="dropdown-label"
@@ -62,12 +63,6 @@
         >
           development
         </p>
-        <!-- 
-    Dropdown Options:
-    - Each dropdown options container should use a `data-dropdown` attribute with a unique identifier
-      (e.g., `data-dropdown="one"`).
-    - Each option within the container should have the `dropdown-option` class for styling and event handling.
-  -->
         <div data-dropdown="env" class="dropdown-options">
           <p class="dropdown-option">development</p>
           <p class="dropdown-option">production</p>
@@ -92,7 +87,7 @@
         </div>
       </div>
     </div>
-    <!-- SEE EXAMPLE -->
+    
     <div class="red flex">
       <p>--network</p>
       <div class="dropdown">

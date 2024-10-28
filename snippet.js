@@ -1,5 +1,11 @@
 // Track all active dropdown identifiers
 let activeDropdownIds = [];
+const copyCodeButton = document.getElementById("copy-code");
+
+//add event listener to the copy code button
+copyCodeButton?.addEventListener("click", function (e) {
+  copyCode(e);
+});
 
 /**
  * Toggles visibility of the dropdown options.
@@ -51,3 +57,32 @@ function updateDropdownLabel(e) {
   // Hide the dropdown options after selection
   toggleDropdownOptions(dropdownId);
 }
+
+/**
+ * copies the code to user clipboard
+ * @param {Event} e - The click event from a dropdown option.
+ */
+async function copyCode(e) {
+  //get current code block
+  const snippetElement = document.getElementsByClassName("options")[0];
+
+  let snippet = snippetElement.innerText;
+
+  //remove all newlines from text
+  snippet = snippet.replace(/(\r\n|\n|\r)/gm, " ");
+
+  try {
+    await navigator.clipboard.writeText(snippet);
+    console.log(snippet);
+    console.log("content copied to clipboard");
+  } catch (error) {
+    console.error("Failed to copy: ", err);
+  }
+}
+
+/**
+ * This function should assert code validity based on predefined rules.
+ * It is called everytime a code variable is changed
+ * @param {Event} e 
+ */
+function assertCodeValidity(e) {}
