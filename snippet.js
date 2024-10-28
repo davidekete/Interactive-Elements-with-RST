@@ -69,20 +69,34 @@ async function copyCode(e) {
   let snippet = snippetElement.innerText;
 
   //remove all newlines from text
-  snippet = snippet.replace(/(\r\n|\n|\r)/gm, " ");
+  snippet = snippet.replace(/(\r\n|\n|\r)/gm, "");
 
   try {
     await navigator.clipboard.writeText(snippet);
     console.log(snippet);
     console.log("content copied to clipboard");
   } catch (error) {
-    console.error("Failed to copy: ", err);
+    console.error("Failed to copy: ", error);
   }
 }
 
 /**
  * This function should assert code validity based on predefined rules.
  * It is called everytime a code variable is changed
- * @param {Event} e 
+ * @param {Event} e
  */
 function assertCodeValidity(e) {}
+
+function mouseDown() {
+  const button = document.getElementById("button");
+  if (button) {
+    button.style.backgroundColor = "#e2e2e2";
+  }
+}
+
+function mouseUp() {
+  const button = document.getElementById("button");
+  if (button) {
+    button.style.backgroundColor = "#4e4e4e";
+  }
+}
