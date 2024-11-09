@@ -240,12 +240,15 @@ exclude_patterns = [
 
 html_css_files = [
     "css/pdf.css",
+    "css/styles.css"
 ]
 
 
 # Adds custom JavaScript files, located under 'html_static_path'
 
-# html_js_files = []
+html_js_files = [
+    "snippet.js"
+]
 
 
 # Specifies a reST snippet to be appended to each .rst file
