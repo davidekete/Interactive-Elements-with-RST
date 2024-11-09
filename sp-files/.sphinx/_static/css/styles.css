@@ -1,11 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
 
-/* * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-} */
-
 button {
   background-color: #4e4e4e;
   color: #b4b4b4;
@@ -15,12 +9,13 @@ button {
   font-size: 15px;
 }
 
-.container{
+.container {
   inline-size: 100%;
   /* block-size: 100vh; */
   display: flex;
   align-items: center;
   justify-content: center;
+  max-width: 730px;
 }
 
 .dropdown-label {
@@ -35,11 +30,11 @@ button {
   flex-direction: column;
   display: none;
   box-sizing: border-box;
-  transition: border 0.3s ease;
+  transition: border 0.fs ease;
   margin-bottom: 5px;
   border-radius: 5px;
   padding: 10px;
-  position: absolute;
+  position: fixed;
 }
 
 .dropdown-option:hover {
@@ -66,6 +61,8 @@ button {
   color: #ffffff;
   padding-block-end: 1rem;
   border-radius: 0.6rem;
+  max-width: 730px;
+  overflow-x: scroll;
 }
 
 .top {
@@ -84,13 +81,13 @@ button {
 }
 
 .button {
-  position: relative;
+  /* position: relative; */
 }
 
 .icon {
-  position: absolute;
+  /* position: absolute;
   left: 0.3rem;
-  top: 0.7rem;
+  top: 0.7rem; */
 }
 
 .flex {
@@ -99,12 +96,17 @@ button {
   gap: 0.5rem;
 }
 
-.flex-no-gap{
+.flex-no-gap {
   display: flex;
   align-items: center;
   gap: 0rem;
   margin: 0rem;
   padding: 0rem;
+}
+
+.flex p,
+.flex-no-gap p {
+  min-width: max-content;
 }
 
 .green {
